@@ -1,0 +1,13 @@
+[Unit]
+Description=Monitor procesos del sistema
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/monitor_servicio.sh
+Restart=on-failure
+User=usuarioMonitor
+
+[Install]
+WantedBy=multi-user.target
+
+
